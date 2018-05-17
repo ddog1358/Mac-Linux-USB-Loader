@@ -25,6 +25,7 @@
 		2429600F1BC9D8CC00AB8445 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2429600E1BC9D8CC00AB8445 /* WebKit.framework */; };
 		242E92BA1CF201A40096DECA /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 242E92B41CF200260096DECA /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		242E92BB1CF202140096DECA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E92B41CF200260096DECA /* Sparkle.framework */; };
+		243247ED20ADE2F500E1E9BF /* findercontext.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2469D1291FF0446C002F411B /* findercontext.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		245784941A8AA7680005F32F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 245784921A8AA7680005F32F /* Localizable.strings */; };
 		245784961A8AB7B80005F32F /* SBDistributionDownloaderPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 245784981A8AB7B80005F32F /* SBDistributionDownloaderPreferencesViewController.xib */; };
 		2457849D1A8AB86D0005F32F /* SBDistributionDownloaderWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2457849F1A8AB86D0005F32F /* SBDistributionDownloaderWindowController.xib */; };
@@ -36,7 +37,6 @@
 		24680E5418AE7FE500B6E13F /* SBGeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24680E5618AE7FE500B6E13F /* SBGeneralPreferencesViewController.xib */; };
 		24680E5B18AE8C3A00B6E13F /* SBEnterprisePreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24680E5318AE7FE000B6E13F /* SBEnterprisePreferencesViewController.xib */; };
 		2469D12D1FF0446C002F411B /* FinderSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469D12C1FF0446C002F411B /* FinderSync.m */; };
-		2469D1321FF0446C002F411B /* findercontext.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2469D1291FF0446C002F411B /* findercontext.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		246AFF841E0C4947001AD081 /* org.sparkle-project.InstallerConnection.xpc in Copy XPC Services */ = {isa = PBXBuildFile; fileRef = 2465946D1E0C3D8700614F75 /* org.sparkle-project.InstallerConnection.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		246AFF851E0C4947001AD081 /* org.sparkle-project.InstallerStatus.xpc in Copy XPC Services */ = {isa = PBXBuildFile; fileRef = 2465946E1E0C3D8700614F75 /* org.sparkle-project.InstallerStatus.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		246AFF861E0C4947001AD081 /* org.sparkle-project.InstallerLauncher.xpc in Copy XPC Services */ = {isa = PBXBuildFile; fileRef = 24DD1A831D847C5C000C61BE /* org.sparkle-project.InstallerLauncher.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -78,19 +78,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		243247EE20ADE2F500E1E9BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A4EC6B1884966900CE6CF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2469D1281FF0446C002F411B;
+			remoteInfo = findercontext;
+		};
 		245AC8021A17CDC20039E2C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24A4EC6B1884966900CE6CF0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 24A4EC721884966900CE6CF0;
 			remoteInfo = "Mac Linux USB Loader";
-		};
-		2469D1301FF0446C002F411B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24A4EC6B1884966900CE6CF0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2469D1281FF0446C002F411B;
-			remoteInfo = findercontext;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -117,13 +117,13 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2469D1361FF0446C002F411B /* Embed App Extensions */ = {
+		243247F020ADE2F500E1E9BF /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2469D1321FF0446C002F411B /* findercontext.appex in Embed App Extensions */,
+				243247ED20ADE2F500E1E9BF /* findercontext.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,12 +705,12 @@
 				23CEDE1621F57F74D2B40B86 /* [CP] Embed Pods Frameworks */,
 				B68F4842EA4D3222B5C0E7CB /* [CP] Copy Pods Resources */,
 				242E92B81CF200380096DECA /* Embed Frameworks */,
-				2469D1361FF0446C002F411B /* Embed App Extensions */,
+				243247F020ADE2F500E1E9BF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2469D1311FF0446C002F411B /* PBXTargetDependency */,
+				243247EF20ADE2F500E1E9BF /* PBXTargetDependency */,
 			);
 			name = "Mac Linux USB Loader";
 			productName = "Mac-Linux-USB-Loader";
@@ -987,15 +987,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		243247EF20ADE2F500E1E9BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2469D1281FF0446C002F411B /* findercontext */;
+			targetProxy = 243247EE20ADE2F500E1E9BF /* PBXContainerItemProxy */;
+		};
 		245AC8031A17CDC20039E2C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24A4EC721884966900CE6CF0 /* Mac Linux USB Loader */;
 			targetProxy = 245AC8021A17CDC20039E2C9 /* PBXContainerItemProxy */;
-		};
-		2469D1311FF0446C002F411B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2469D1281FF0446C002F411B /* findercontext */;
-			targetProxy = 2469D1301FF0446C002F411B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1256,7 +1256,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 8PA6GA85US;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = findercontext/Info.plist;
@@ -1284,7 +1283,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 8PA6GA85US;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = findercontext/Info.plist;
