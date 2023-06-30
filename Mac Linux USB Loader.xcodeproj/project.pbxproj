@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0623A2432A4F5F7C003D9451 /* DownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2412CAEB1960E9E700501D7A /* DownloadOperation.m */; };
+		0623A2442A4F5FD3003D9451 /* NSAlert+Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E4F8D2196A0DF4002767C8 /* NSAlert+Popover.m */; };
 		240F98A118B060AD001EAE87 /* SBEnterpriseSourceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 240F98A018B060AD001EAE87 /* SBEnterpriseSourceLocation.m */; };
 		240FE88019FB0D11004096C7 /* SBEnterpriseConfigurationWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 240FE87F19FB0D11004096C7 /* SBEnterpriseConfigurationWriter.m */; };
 		24101B881896D4A300EDE32C /* SBAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24101B861896D4A300EDE32C /* SBAboutWindowController.m */; };
@@ -704,7 +706,6 @@
 				ORGANIZATIONNAME = SevenBits;
 				TargetAttributes = {
 					24A4EC721884966900CE6CF0 = {
-						DevelopmentTeam = 8PA6GA85US;
 						SystemCapabilities = {
 							com.apple.HardenedRuntime = {
 								enabled = 1;
@@ -721,7 +722,7 @@
 				};
 			};
 			buildConfigurationList = 24A4EC6E1884966900CE6CF0 /* Build configuration list for PBXProject "Mac Linux USB Loader" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -885,7 +886,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0623A2442A4F5FD3003D9451 /* NSAlert+Popover.m in Sources */,
 				24A4ECA41884966A00CE6CF0 /* Mac_Linux_USB_LoaderTests.m in Sources */,
+				0623A2432A4F5F7C003D9451 /* DownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,10 +1246,12 @@
 			baseConfigurationReference = 085D80CD642314AEF05AE98C /* Pods-Mac Linux USB Loader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Mac Linux USB Loader.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3JP7C434M8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1256,7 +1261,12 @@
 				GCC_PREFIX_HEADER = "Mac-Linux-USB-Loader/Mac-Linux-USB-Loader-Prefix.pch";
 				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = "Mac-Linux-USB-Loader/Mac Linux USB Loader-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks $(CONFIGURATION_BUILD_DIR) @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"$(CONFIGURATION_BUILD_DIR)",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sevenbits.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Mac Linux USB Loader";
@@ -1271,10 +1281,12 @@
 			baseConfigurationReference = 6A5F675328D9CBE0D83F2E3F /* Pods-Mac Linux USB Loader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Mac Linux USB Loader.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3JP7C434M8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1284,7 +1296,10 @@
 				GCC_PREFIX_HEADER = "Mac-Linux-USB-Loader/Mac-Linux-USB-Loader-Prefix.pch";
 				GCC_WARN_PEDANTIC = YES;
 				INFOPLIST_FILE = "Mac-Linux-USB-Loader/Mac Linux USB Loader-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sevenbits.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Mac Linux USB Loader";
@@ -1301,6 +1316,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mac Linux USB Loader.app/Contents/MacOS/Mac Linux USB Loader";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3JP7C434M8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
@@ -1326,6 +1342,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mac Linux USB Loader.app/Contents/MacOS/Mac Linux USB Loader";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3JP7C434M8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
